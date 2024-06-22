@@ -1,0 +1,23 @@
+package com.test.pojo;
+
+import java.util.Scanner;
+
+
+public class ScannerDemo {
+//在最外层捕获异常，下层把异常往外抛
+	
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        // 从键盘接收数据
+ 
+        // next方式接收字符串
+        System.out.println("next方式接收：");
+        // 判断是否还有输入
+        if (scan.hasNext()) {
+            String str1 = scan.next();
+            //next()方法不可以带有空白,nextLine()可以获得空白，返回输入回车前的所有字符
+            System.out.println("输入的数据为：" + str1);
+        }
+        scan.close();
+    }
+}

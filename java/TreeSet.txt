@@ -1,0 +1,26 @@
+package com.test.pojo;
+
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class Treesetdemo {
+	/***
+	 * student对象通过比较器的方式存入TreeSet
+	 * 通过匿名内部类实现了comparator接口
+	 * 然后重写了compare（）方法
+	 */
+	public static void main(String[] args) {
+		TreeSet ts =new TreeSet(new Comparator() {
+			@Override
+			public int compare(Object o1,Object o2) {
+				return -1;
+			}
+		});
+		ts.add(new Student("1","王五"));
+		ts.add(new Student("2","李四"));
+		ts.add(new Student("2","张三"));
+		System.out.println(ts);
+
+	}
+
+}

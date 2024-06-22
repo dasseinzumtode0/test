@@ -1,0 +1,40 @@
+package com.test.pojo;
+
+import java.util.ArrayList;
+
+public class ArrayListdemo {
+	public static void main (String[]args) {
+	//1创建一个ArrayList的集合对象
+	//ArrayList<String> list = new ArrayList<String>();
+	//从jdk1.7开始支持后面省略
+	ArrayList<String> list = new ArrayList<>();
+	list.add("黑马");
+	list.add("黑马");
+	list.add("java");
+	System.out.println(list);
+	
+	//2往集合中的指定位置插入指定的元素
+	list.add(1, "Mysql");
+	System.out.println(list);
+	
+	//3根据索引获取集合中某个索引位置元素的值
+	String rs = list.get(1);
+	System.out.println(rs);
+	
+	//4获取集合的大小
+	System.out.println(list.size());
+	
+	//5根据索引删除集合中某个元素值，将被删除元素的值返回
+	System.out.println(list.remove(1));
+	System.out.println(list);
+	
+	//6直接删除某个元素值，成功返回true，否则返回false
+	System.out.println(list.remove("java"));
+	System.out.println(list);
+	//默认删除第一次出现的数据！！
+	
+	//修改某个索引位置处的数据，修改后会返回原来的值
+	System.out.println(list.set(1, "黑马程序员"));
+	System.out.println(list);
+	}
+}

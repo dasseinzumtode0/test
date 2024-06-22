@@ -1,0 +1,21 @@
+package com.test.pojo;
+
+import java.util.LinkedList;
+
+public class Linkedlist {
+	public static void main(String[] args) {
+		LinkedList link = new LinkedList();
+		link.add("张三");
+		link.add("李四");
+		link.add(111);
+		System.out.println(link.toString());
+		
+		//向集合中指定位置插入元素
+		link.add(3, "嘻嘻");
+		link.addFirst("First");
+		System.out.println(link);
+		System.out.println(link.getFirst());
+		link.remove(3);
+		System.out.println(link);
+	}
+}

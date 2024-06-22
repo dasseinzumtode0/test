@@ -1,0 +1,37 @@
+package com.test.pojo;
+
+public class StringBufferTest {
+
+	public static void main(String[] args) {
+		System.out.println("1 添加----");
+		add();
+		System.out.println("2 删除----");
+		remove();
+		System.out.println("3 修改----");
+		alter();
+	}
+	private static void alter() {
+		StringBuffer sb = new StringBuffer("itcastcn");
+		sb.reverse();
+		System.out.println("反转结果:" + sb);
+		sb.setCharAt(1, 'p');
+		System.out.println("修改指定位置结果:" + sb);
+	}
+	private static void remove() {
+		StringBuffer sb = new StringBuffer("itcastcn");
+		sb.delete(1, 4);
+		System.out.println("delete删除结果:" + sb);
+		sb.deleteCharAt(3);
+		System.out.println("指定位置删除结果:" + sb);
+		
+	}
+	public static void add() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("itcast");
+		System.out.println("append添加结果:" + sb);
+		sb.insert(2, "123");
+		System.out.println("insert插入结果："+ sb);
+		
+	}
+
+}

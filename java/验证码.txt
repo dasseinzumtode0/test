@@ -1,0 +1,17 @@
+package com.test.pojo;
+
+import java.util.Random;
+
+public class Logindemo {
+	public static void main(String[] args) {
+		String code = "";
+		String date = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		Random r = new Random();
+		
+		for(int i = 0; i<4;i++) {
+			int index = r.nextInt(date.length());
+			code += date.charAt(index);
+		}
+		System.out.println(code);
+	}
+}

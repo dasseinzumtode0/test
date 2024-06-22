@@ -1,0 +1,16 @@
+package com.test.pojo;
+
+public class Superdemo {
+	/***
+	 * 1super关键字访问父类的成员变量和方法
+	 * super.成员变量
+	 * super.成员方法（参数1，参数2.。。。）
+	 * 
+	 * 2super关键字访问父类中指定的构造方法
+	 * super(参数1，参数2.。。。)
+	 */
+	public static void main(String[]args) {
+		Dog dog = new Dog("牧羊犬",3,"黑色");
+		System.out.println(dog.info());
+	}
+}

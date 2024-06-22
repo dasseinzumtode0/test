@@ -1,0 +1,17 @@
+package com.test.pojo;
+import java.util.*; 
+
+public class Iteratordemo {
+	public static void main(String[]args) {
+		ArrayList list = new ArrayList();
+		list.add("嘻嘻");
+		list.add("嘿嘿");
+		list.add("嗡嗡嗡");
+//		迭代器遍历
+		Iterator it = list.iterator();
+		while(it.hasNext()) {
+			Object obj = it.next();
+			System.out.println(obj);
+		}
+	}
+}

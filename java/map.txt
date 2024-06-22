@@ -1,0 +1,47 @@
+package com.test.pojo;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class Mapdemo {
+		/***
+		 * 第一种方式先遍历map集合中所有的键，再根据键获取相应的值
+		 * 
+		 * 另外一种方式是先获取集合中的所有的映射关系，再从映射关系中取出键和值
+		 */
+//	public static void main(String[] args) {
+//		HashMap map = new HashMap();//创建Map集合
+//		map.put("2","张三");//存储键和值
+//		map.put("1","李四");
+//		Set entrySet = map.entrySet();
+//		Iterator it = entrySet.iterator();
+//		while(it.hasNext()) {
+//			//获取集合中键值对映射关系
+//			Map.Entry entry = (Map.Entry)(it.next());
+//			Object key = entry.getKey();//获取Entry中的键	
+//			Object value = entry.getValue();//获取Entry中的值
+//			System.out.println(key+":"+value);
+//		}
+//	}
+	
+	/**
+	 * TreeMap中的键必须是唯一的，不能重复且有序，
+	 * 若存储了相同的键，后存储的值会覆盖原有的值
+	 */
+	public static void main(String[] args) {
+		TreeMap map = new TreeMap();//创建Map集合
+		map.put(3, "李四");
+		map.put(2,"王五");
+		map.put(5,"张三");
+		Set keySet = map.keySet();
+		Iterator it = keySet.iterator();
+		while(it.hasNext()) {
+			Object key = it.next();
+			Object value = map.get(key);
+			System.out.println(key+":"+value);
+		}
+	}
+}

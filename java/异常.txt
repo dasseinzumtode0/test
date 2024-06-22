@@ -1,0 +1,23 @@
+package com.test.pojo;
+
+public class ExceptionTest {
+
+	public static void main(String[] args) {
+	try {
+				saveAge(223);//选中多行alt+/生成try catch,选中代码 tab缩进，shift+tab左缩进
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+	//throws用在方法上，抛出方法中的异常
+	private static void saveAge(int age) {
+		if(age > 0 && age < 100) {
+			System.out.println("年龄被成功保存："+age);
+		}else {
+			//用一个对象封装这个异常，throw来抛出这个异常对象
+			throw new AgeillegalRuntimeException("age is illegal,your age is "+ age);
+		}
+		
+	}
+
+}

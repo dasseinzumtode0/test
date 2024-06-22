@@ -1,0 +1,27 @@
+package com.test.pojo;
+
+class Outer {
+	int m = 0;
+	void test1() {
+		System.out.println("外部类成员方法test1()");
+	}
+class Inner{
+	int n = 1;
+	void show1() {
+		//在成员内部的方法中访问外部类的成员变量m
+		System.out.println("外部成员变量m = "+ m);
+		test1();
+	}
+	void show2() {
+		System.out.println("内部成员方法show2()");
+	}
+}
+//外部类方法
+void test2() {
+	//定义外部类方法访问内部类变量和方法
+	Inner inner = new Inner();
+	System.out.println("内部成员变量n = "+ inner.n);
+	inner.show2();
+}
+}
+
